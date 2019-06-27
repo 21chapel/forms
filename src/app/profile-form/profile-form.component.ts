@@ -15,12 +15,12 @@ export class ProfileFormComponent implements OnInit {
 
   genders = ['male', 'female'];
 
-  model = new Profile('Anoop', 'anoop.anthony@gmail.com','male',6475805318, 'Toronto');
+  userModel = new Profile('Anoop', 'anoop.anthony@gmail.com','male',6475805318, 'Toronto');
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
-  get diagnostic() { return JSON.stringify(this.model); }
+  get diagnostic() { return JSON.stringify(this.userModel); }
 
 }
