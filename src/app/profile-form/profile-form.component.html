@@ -5,7 +5,7 @@
       <div class="form-group">
         <label >Email Address</label>
         <input type="email" #emailAddress="ngModel" [class.is-invalid]="emailAddress.invalid && emailAddress.touched"  class="form-control" required [(ngModel)]="userModel.email" name="email">
-        <small *ngIf="emailAddress.invalid && emailAddress.touched">email address required</small>
+        <small class="text-danger" [class.d-none]="emailAddress.valid || emailAddress.untouched">email address required</small>
       </div>
 
       <!-- {{ emailAddress.untouched }} -->
