@@ -7,12 +7,14 @@
         <input type="email" #emailAddress="ngModel" [class.is-invalid]="emailAddress.invalid && emailAddress.touched"  class="form-control" required [(ngModel)]="userModel.email" name="email">
       </div>
 
-      {{ emailAddress.untouched }}
+      <!-- {{ emailAddress.untouched }} -->
  
       <div class="form-group">
         <label>Location</label>
-        <input type="text" class="form-control"  [(ngModel)]="userModel.location" name="location">
+        <input type="text" class="form-control" #location="ngModel" required [class.is-invalid]="location.touched && location.invalid" [(ngModel)]="userModel.location" name="location">
       </div>
+
+      {{ location.touched }}
 
       <div class="form-group">
           <select class="custom-select" name="gender" [(ngModel)]="userModel.gender">
