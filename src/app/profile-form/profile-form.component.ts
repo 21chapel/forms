@@ -19,7 +19,10 @@ export class ProfileFormComponent implements OnInit {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  onSubmit() { 
+    this.submitted = true; 
+    console.log(this.userModel);
+  }
 
   get diagnostic() { return JSON.stringify(this.userModel); }
 

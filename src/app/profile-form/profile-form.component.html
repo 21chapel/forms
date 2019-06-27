@@ -1,6 +1,6 @@
 <div class="container-fluid" mb-5>
     <h1>Profile Form</h1>
-    <form #userForm="ngForm">
+    <form #userForm="ngForm" novalidate (submit)="onSubmit()">
 
       <div class="form-group">
         <label >Email Address</label>
